@@ -3,7 +3,7 @@ from sklearn import datasets
 
 iris = datasets.load_iris()
 
-X = iris.data[:, :3]
+X = iris.data[:, :4]
 y = (iris.target != 0) * 1
 
 
@@ -61,7 +61,7 @@ model.fit(X, y)
 preds = model.predict(X)
 #(preds == y).mean()
 
-print("cool")
+print(preds)
 
 print('theta:',model.theta)
 
